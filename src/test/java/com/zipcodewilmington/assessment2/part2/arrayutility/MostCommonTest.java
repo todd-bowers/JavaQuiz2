@@ -5,6 +5,8 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Map;
+
 public class MostCommonTest {
     private ArrayUtility utility;
 
@@ -21,7 +23,7 @@ public class MostCommonTest {
         Integer expected = 5;
 
         //When
-        Integer actual = utility.mostCommon(array);
+        Map.Entry<Integer, Integer> actual = utility.mostCommon(array);
 
         //Then
         Assert.assertEquals(expected, actual);
@@ -34,7 +36,7 @@ public class MostCommonTest {
         Integer[] array = {commonValue, 5, 1, 1, commonValue, 5, 5, commonValue, commonValue};
 
         //When
-        Integer actual = utility.mostCommon(array);
+        Map.Entry<Integer, Integer> actual = utility.mostCommon(array);
 
         //Then
         Assert.assertEquals(commonValue, actual);
